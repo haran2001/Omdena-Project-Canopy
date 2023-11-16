@@ -12,6 +12,6 @@ streamlit-option-menu
 # ee
 # geemap
 # windows-curses
-os
+# os
 folium
 streamlit_folium
