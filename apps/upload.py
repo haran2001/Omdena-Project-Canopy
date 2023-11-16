@@ -94,4 +94,6 @@ def app():
         else:
             with row1_col1:
                 m = leafmap.Map()
+                m.add_basemap("ROADMAP")
+                m.to_streamlit(height=700)
                 st.pydeck_chart(m)

@@ -1,16 +1,16 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import home, upload, map, test1  # import your app modules here
 
-st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
-
-# A dictionary of apps in the format of {"App title": "App icon"}
-# More icons can be found here: https://icons.getbootstrap.com
+st.set_page_config(
+    page_title="Project Canopy", layout="wide", page_icon=":evergreen_tree:"
+)
 
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
-    {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
+    # {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
+    {"func": map.app, "title": "test", "icon": "hand"},
+    {"func": test1.app, "title": "test1", "icon": "hand"},
 ]
 
 titles = [app["title"] for app in apps]
@@ -26,22 +26,17 @@ else:
 
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "Project Canopy",
         options=titles,
         icons=icons,
-        menu_icon="cast",
+        menu_icon="evergreen_tree",
         default_index=default_index,
     )
 
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
-        
-        Source code: <https://github.com/giswqs/streamlit-template>
-
-        More menu icons: <https://icons.getbootstrap.com>
+        Welcome to Project Canopy!
     """
     )
 

@@ -3,17 +3,16 @@ import leafmap.foliumap as leafmap
 
 
 def app():
-    st.title("Home")
+    st.title("Project Canopy 🌲")
 
     st.markdown(
         """
-    A [streamlit](https://streamlit.io) app template for geospatial applications based on [streamlit-option-menu](https://github.com/victoryhb/streamlit-option-menu). 
-    To create a direct link to a pre-selected menu, add `?page=<app name>` to the URL, e.g., `?page=upload`.
-    https://share.streamlit.io/giswqs/streamlit-template?page=upload
+    Project Canopy allows you to select any area of your choice and produces a comprehensive deforestation report on it.
+    Check out https://www.projectcanopy.org/ for more details. 
 
     """
     )
 
-    m = leafmap.Map(locate_control=True)
-    m.add_basemap("ROADMAP")
-    m.to_streamlit(height=700)
+    # m = leafmap.Map(locate_control=True)
+    # m.add_basemap("ROADMAP")
+    # m.to_streamlit(height=700)

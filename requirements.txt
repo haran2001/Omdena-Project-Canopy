@@ -9,3 +9,6 @@ nbserverproxy
 streamlit
 streamlit-option-menu
 
+ee
+geemap
+windows-curses
