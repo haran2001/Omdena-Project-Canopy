@@ -1,4 +1,6 @@
 --find-links=https://girder.github.io/large_image_wheels GDAL
+jupyterlab==4.0.7
+
 geemap
 geopandas
 jupyter-server-proxy==4.1.0
